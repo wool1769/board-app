@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.board.mvc.repository.FavoritesRepository">
+
+	<insert id="save" parameterType="com.board.mvc.domain.Favorites">
+		INSERT INTO favorites(f_userid, f_board_id) 
+		VALUES('${id}',${boardId})
+	</insert>
+
+	<delete id="delete" parameterType="com.board.mvc.domain.Favorites">
+		DELETE FROM favorites
+		WHERE f_board_id = ${boardId} AND f_userid = '${id}'
+	</delete>
+	
+	<select id="check" parameterType="com.board.mvc.domain.Favorites" resultType="int">
+	SELECT COUNT(*) FROM favorites WHERE f_board_id = ${boardId} AND f_userid = '${id}'
+	</select>
+
+</mapper>

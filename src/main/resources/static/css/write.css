@@ -1,0 +1,105 @@
+@import url(reset.css);
+
+header {
+    width: 100vw;
+    height: 80px;
+    background: #436E60;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.headerFill{
+    height: 80px;
+}
+
+.writeSection {
+    /* border: 1px solid black; */
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    /* margin-top: 120px !important; */
+    /* position: relative; */
+
+    /* font-size: 25px; */
+    display: flex;
+    flex-direction: column;
+}
+.toastui-editor-popup-add-image{margin: auto !important;}
+.blind{display: none;}
+
+.writeSection h3{
+    font-size: 40px !important;
+    margin-top: 40px !important;
+    /* background-color: red; */
+}
+.writeBox {
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+.boxInner{
+    display: flex;
+    flex-direction: column
+}
+
+.boxInner input{
+    /* width: 99%; */
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    border: 1px solid #436e6067;
+    margin-bottom: 20px !important;
+    border-radius: 9px;
+}
+.toastui-editor-defaultUI-toolbar{
+    background-color: #436e6067 !important;
+}
+.tab-item{
+    background-color: #436e6067 !important;
+}
+/* .toastui-editor-defaultUI-toolbar button{
+    border: #436e6067;
+} */
+
+
+.saveBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 27px;
+    margin: 7px;
+    background-color: #233a32a1;
+    color: #ffffff;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 4px;
+    font-weight: 900 !important;
+    cursor: pointer;
+    /* ---- */
+    align-self: flex-end;
+}
+.saveBtn:hover{
+    background-color: #7fa699a1;
+    color: #000;
+}
+
+
+
+
+/* 폰(스마트폰) 스타일 */
+@media (max-width: 767px) {
+    header {
+        height: 50px;
+    }
+    .headerFill{
+        height: 50px;
+    }
+
+    h3{
+        font-size: 32px !important;
+    
+    }
+}

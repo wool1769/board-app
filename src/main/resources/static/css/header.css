@@ -1,0 +1,253 @@
+.hdWrap {
+    width: 95vw;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+
+}
+
+
+.hdWrap h1 {
+    font-size: 60px;
+    color: #292929;
+    font-weight: 600;
+}
+
+#logoutBtn,
+#loginBtn,
+.menubox>div:not(.loginModal) {
+    cursor: pointer;
+    margin: 2px;
+    font-size: 20px;
+    color: #292929;
+    font-weight: 600;
+}
+
+#logoutBtn:hover,#loginBtn:hover,.menubox>div:not(.loginModal):hover {
+    color: #292929 !important;
+    text-shadow: 0 0 7px #a6a6a683, 0 0 10px #a6a6a683, 0 0 10px #a6a6a683, 0 0 10px #0fa,
+        0 0 20px #0fa, 0 0 20px #0fa, 0 0 20px #0fa, 0 0 20px #0fa;
+}
+
+
+
+#logoutBtn,
+#loginBtn {
+    margin-right: 50px;
+}
+
+.loginModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blid {
+    display: none;
+}
+
+#loginForm {
+    width: 400px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.237);
+    background: #ffffff;
+    position: relative;
+    top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.forminner {
+
+    height: 75%;
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #29292958; */
+
+}
+
+/* .forminner{} */
+.forminner h3 {
+    font-size: 60px;
+    font-weight: 600;
+    cursor: default;
+}
+
+#username,
+#password {
+    padding-left: 10px;
+    font-size: 15px;
+    margin: 10px;
+    width: 270px;
+    height: 40px;
+    border: 1px solid #b4b4b4;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    outline: none;
+}
+
+.textBoxs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formBtns{
+    display: flex;
+}
+.formBtns>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 27px;
+    margin: 7px;
+    background-color: #233a32a1;
+    color: #ffffff;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 4px;
+    font-weight: 900 !important;
+    cursor: pointer;
+}
+
+.formBtns>*:hover {
+    background-color: #7fa699a1;
+    color: #000;
+}
+
+.signUp {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+.menubox {
+    display: flex;
+
+
+}
+
+.menubox>div:not(.loginModal) {
+    /* border: 1px solid; */
+    font-size: 30px !important;
+    margin-left: 18px !important;
+}
+
+
+
+
+
+
+
+/* 폰(스마트폰) 스타일 */
+@media (max-width: 767px) {
+
+    /* .hdWrap > *{border: 6px solid;} */
+    .hdWrap {
+        justify-content: center;
+    }
+
+    .hdWrap h1 {
+        font-size: 40px;
+    }
+
+    .menuTogle {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .menuTogle span {
+        transition: all 1s;
+        width: 100%;
+        height: 18%;
+        background-color: #0000006f;
+        border-radius: 4px;
+    }
+
+
+    .menuTogleSpan1 {
+        transform: translateY(12.5px) rotate(45deg);
+    }
+
+    .menuTogleSpan2 {
+        opacity: 0;
+    }
+
+    .menuTogleSpan3 {
+        transform: translateY(-12.5px) rotate(-45deg);
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50px;
+        left: -80%;
+        height: 100vh;
+        width: 80%;
+        background: #436e60fa;
+        transition: 0.8s;
+        z-index: 1;
+
+    }
+
+    .menubox {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .menuSlid {
+        left: 0;
+    }
+
+    #logoutBtn,
+    #loginBtn,
+    .menubox>div:not(.loginModal) {
+        font-size: 30px;
+        margin: 20px;
+    }
+
+    #loginForm {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(100vh - 50px);
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
+
+    
+
+
+
+
+
+}

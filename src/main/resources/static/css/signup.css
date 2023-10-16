@@ -1,0 +1,121 @@
+@import url(reset.css);
+
+header {
+    width: 100vw;
+    height: 80px;
+    background: #436E60;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.headerFill{
+    height: 80px;
+}
+
+.signUpSection {
+    /* border: 1px solid black; */
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px !important;
+    /* position: relative; */
+
+    /* font-size: 25px; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.signUpSection h3{
+    font-size: 40px;
+}
+.signUpBox{
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+.signUpBox>div{
+    /* border: 1px solid darkolivegreen; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.signUpBox>div>p{
+font-size: 30px;
+margin: 10px 0;
+}
+.signUpSection input{
+    height: 40px;
+    margin: 10px 0;
+    font-size: 30px;
+    border: 2px solid #0d211929;
+    color: #435952;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+.signUpBtn{
+    /* border: 2px solid #2f2f2f6a; */
+    /* border-radius: 7px; */
+    /* width: 100px; */
+    /* height: 30px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background: #7fa699a1; */
+    /* ---- */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 27px;
+    margin: 7px;
+    background-color: #233a32a1;
+    color: #ffffff;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 4px;
+    font-weight: 900 !important;
+    cursor: pointer;
+    /* ---- */
+    align-self: flex-end;
+    /* font-size: 20px; */
+    margin-bottom: 50px;
+
+}
+.signUpBtn:hover{
+    background-color: #7fa699a1;
+    color: #000;
+}
+
+
+
+
+/* 폰(스마트폰) 스타일 */
+@media (max-width: 767px) {
+    header {
+        height: 50px;
+    }
+    .headerFill{
+        height: 50px;
+    }
+    h3{
+        font-size: 32px !important;
+        transform: translateY(3px);
+    }
+    .signUpBox>div{
+
+        width: 100%;
+
+    }
+    .signUpBox p{
+        font-size: 25px !important;
+        
+    }
+
+
+}

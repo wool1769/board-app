@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.board.mvc.repository.CommentRepository">
+
+	<!-- <insert id="save" parameterType="com.board.mvc.domain.Member" useGeneratedKeys="true" 
+		keyProperty="memberId"> </insert> -->
+	<insert id="save" parameterType="com.board.mvc.domain.Comment"
+		useGeneratedKeys="true" keyProperty="commentId">
+		INSERT INTO comment
+		(
+		content,
+		board_id,
+		c_comment_id,
+		member_id,
+		date
+		)
+		VALUES
+		(
+		#{content},
+		#{boardId},
+		#{cCommentId},
+		#{memberId},
+		NOW()
+		)
+	</insert>
+
+	<select id="getList" parameterType="int"
+		resultType="com.board.mvc.domain.Comment">
+		SELECT comment_id, content, board_id, c_comment_id,
+		member_id, date
+		FROM comment
+		WHERE board_id = ${boardId}
+	</select>
+
+	<select id="get" parameterType="int"
+		resultType="com.board.mvc.domain.Comment">
+		SELECT comment_id, content, board_id, c_comment_id,
+		member_id, date
+		FROM comment
+		WHERE comment_id = ${commentId}
+	</select>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM comment
+		WHERE
+		comment_id = ${commentId}
+	</delete>
+
+	<delete id="deleteBoardAll" parameterType="int">
+		DELETE FROM comment
+		WHERE board_id = ${boardId}
+	</delete>
+
+	<delete id="deleteMemberAll" parameterType="String">
+		DELETE FROM comment
+		WHERE member_id = '${memberId}'
+	</delete>
+
+
+
+</mapper>
